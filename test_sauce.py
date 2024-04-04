@@ -30,7 +30,7 @@ class Test_Source:
         
 
     def readInvalidDataFromJSON():
-        with open(r'info/data.json', 'r') as file: # ilk baştaki r ön ek # testlerde genelde r kullanılır yani dosyayı okuma modunda açar.
+        with open(r'data/data.json', 'r') as file: # ilk baştaki r ön ek # testlerde genelde r kullanılır yani dosyayı okuma modunda açar.
             data = json.load(file) #JSON veriler Python veri yapısına dönüşür.
         return [(user['username'], user['password']) for user in data['invalid_login_users']] #tuple list oluşturur.
 
